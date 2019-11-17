@@ -1,0 +1,34 @@
+<div class="container" fxLayout="column" fxLayoutGap="20px">
+    <h2>Welcome to Pamlight Demo App</h2>
+    <p>Following are a list of documents created by other people testing this tool. You can create items as well and see
+        it reflect immediately in other browsers/tabs</p>
+
+    <div fxLayout="row" fxLayoutAlign="flex-end">
+        <button mat-raised-button color="primary" (click)="openItemModal()">New item</button>
+    </div>
+
+    <div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <!-- Position Column -->
+            <ng-container matColumnDef="date">
+                <th mat-header-cell *matHeaderCellDef> Date </th>
+                <td mat-cell *matCellDef="let element"> {{timeAgo(element.date)}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+
+            <!-- Message Column -->
+            <ng-container matColumnDef="message">
+                <th mat-header-cell *matHeaderCellDef> Message </th>
+                <td mat-cell *matCellDef="let element"> {{element.message}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </div>
+</div>
