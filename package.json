@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently \"ng serve --port 8006\" \"npm run start:server\"",
+    "start": "ng serve --port 8006",
     "start:server": "cd server && npm run start",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --prod && firebase deploy --only hosting:demo"
   },
   "private": true,
   "dependencies": {
@@ -40,7 +41,6 @@
     "@types/lodash": "^4.14.148",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
-    "concurrently": "^4.1.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",

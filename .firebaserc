@@ -1,5 +1,26 @@
 {
   "projects": {
     "default": "pamlight-db"
+  },
+  "targets": {
+    "pamlight-db": {
+      "hosting": {
+        "docs": [
+          "pamlight-docs"
+        ],
+        "blog": [
+          "pamlight-blog"
+        ],
+        "community": [
+          "pamlight-community"
+        ],
+        "app": [
+          "pamlight-db"
+        ],
+        "demo": [
+          "pamlight-demo"
+        ]
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/pamlight-demo",
+    "target": "demo",
     "ignore": [
       "firebase.json",
       "**/.*",
